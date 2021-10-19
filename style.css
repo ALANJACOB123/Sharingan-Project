@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  text-transform: capitalize;
+}
+.hero-banner {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6), rgba(0,0,0,0.95)),
+    url("./hero-img.jpg") center/cover no-repeat fixed;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  overflow: hidden;
+}
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.eye {
+  z-index: 100;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background: #000;
+  border-radius: 50%;
+  transition: animation 1s all;
+  animation: rotate-scale 1.5s 1;
+}
+.left-eye {
+  transform: translate(14%, -55%) rotate(73deg);
+}
+.right-eye {
+  transform: translate(-15%, -50%) rotate(73deg);
+}
+
+.leaf {
+  width: 100px;
+  height: 100px;
+  background: red;
+  border-radius: 100% 0;
+}
+.leaf1 {
+  transform: translate(-50%, -50%) rotate(-60deg);
+}
+.leaf3 {
+  border: 1px solid #000;
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+.leaf3::before,
+.leaf3::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #000;
+  border-radius: 100% 0;
+}
+.leaf3::before {
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+
+.leaf3::after {
+  transform: translate(-50%, -50%) rotate(-60deg);
+}
+.circle {
+  width: 30px;
+  height: 30px;
+  background-color: #000;
+  z-index: 100;
+  border-radius: 50%;
+  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.3);
+}
+.mangekuo-sharingan {
+  display: none;
+}
+.sharingan {
+  position: relative;
+  width: 155px;
+  height: 155px;
+  border-radius: 50%;
+  background-color: red;
+  border: 2px solid #000;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6);
+  animation: rotate 3s 1s 1;
+  transition: animation 1s all;
+  /* animation-iteration-count: 2; */
+}
+.left-eye-sharingan {
+  transform: translate(14%, -55%) rotate(120deg);
+}
+.right-eye-sharingan {
+  transform: translate(-14%, -50%) rotate(120deg);
+}
+.sharingan::before,
+.sharingan::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.sharingan::before {
+  width: 25px;
+  height: 25px;
+  background-color: #000;
+}
+
+.sharingan::after {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #000;
+  filter: blur(2px);
+}
+
+.comma {
+  position: absolute;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 90px;
+}
+
+.comma1 {
+  top: -5px;
+  left: 60px;
+  transform: rotate(180deg);
+}
+
+.comma2 {
+  top: 33px;
+  left: 45px;
+  transform: rotate(60deg);
+}
+
+.comma3 {
+  top: 34px;
+  right: 46px;
+  transform: rotate(-60deg);
+}
+/* .tomoe-sharingan.add{
+  display: none;
+} */
+@keyframes rotate {
+  from {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(360deg) scale(0.75) ;
+    opacity: 0.5;
+  }
+}
+@keyframes rotate-scale {
+  from {
+    transform: rotate(0) scale(0.75);
+    opacity: 0.5;
+  }
+  to {
+    transform: rotate(360deg) scale(1);
+    opacity: 1;
+  }
+}
+.main-container{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8));
+  display: grid;
+  place-items: center;
+}
+.box{
+  width:  100%;
+  height: 500px;
+  text-align: center;
+}
+.box p{
+  font-size: 30px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.box button{
+  display: inline-block;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 10px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+.box button:active{
+  transform: scale(0.98);
+}
+
